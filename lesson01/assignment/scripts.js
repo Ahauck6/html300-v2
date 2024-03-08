@@ -30,4 +30,105 @@ document. addEventListener("DOMContentLoaded", function(){
     inputField.value = ''
   })
 
+  //This is for form-map
+  const formMap = document.querySelector('#form-map')
+  formMap.addEventListener('submit', function(event){
+    //Prevent from submitting to server
+    event.preventDefault() 
+    let array = [6, 10, 20, 45]
+
+    const inputField = document.querySelector('#form-map .input')
+    const userInput = inputField.value
+    const userNumber = parseInt(userInput)
+
+    //If input is a number 
+    if(!isNaN(userNumber)){
+      
+      //Use map and user input to create new array
+      let array2 = array.map(function(value){
+        return value + userNumber;
+      });
+      
+      //Output the result to the page
+      document.querySelector('#form-map .output').innerHTML = array2
+
+  }
+
+  // Clear the form field so the user can try again
+  inputField.value = ''
+
 })
+
+//This is for form-filter
+const formFilter = document.querySelector('#form-filter')
+formFilter.addEventListener('submit', function(event){
+  //Prevent form from submitting to server
+  event.preventDefault() 
+  let array = [6, 10, 20, 45]
+
+  const inputField = document.querySelector('#form-filter .input')
+  const userInput = inputField.value
+  const userNumber = parseInt(userInput)
+
+  //If user input is a number
+  if(!isNaN(userNumber)){
+
+    let array2 = array.filter(function(value){
+      return value > userNumber;
+    });
+
+    //Output the result to page
+    document.querySelector('#form-filter .output').innerHTML = array2
+  }
+
+  // Clear the form field so the user can try again
+  inputField.value = ''
+
+})
+
+//This is for form-find
+const formFind = document.querySelector('#form-find')
+  formFind.addEventListener('submit', function(event){
+    //Prevent from submitting to server
+    event.preventDefault() 
+    let array = [6, 10, 20, 45]
+
+  const inputField = document.querySelector('#form-find .input')
+  const userInput = inputField.value
+  const userNumber = parseInt(userInput)
+
+  //If user input is a number
+  if(!isNaN(userNumber)){
+
+    let result = array.find(value =>value > userNumber);
+
+  //Output the result to page
+  document.querySelector('#form-find .output').innerHTML = result  
+}
+
+// Clear the form field so the user can try again
+inputField.value = ''
+
+}) 
+
+//This is for form-string
+const animal = document.querySelector('#form-string')
+animal.addEventListener('submit', function(event){
+  //Prevent form from submitting to server
+  event.preventDefault()
+
+  const inputField = document.querySelector('#form-string .input')
+  const userInput = inputField.value 
+
+  //Create string with string interpolation
+  let string = `${userInput} is your favorite animal!`
+
+  //Output the result to the page
+  document.querySelector('#form-string .output').innerHTML = string
+
+  // Clear the form field so the user can try again
+inputField.value = ''
+
+})
+
+}) 
