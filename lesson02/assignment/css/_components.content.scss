@@ -8,10 +8,34 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
+@mixin line {
+    display: inline-block;
 }
 
-h1 {
-    color: $red;
+.container-two {
+    @include line;
+    line-height: 2;
+    .list {
+        font-weight: bold;
+        color: $dark-text;
+        font-size: 1.5rem;
+    }
+    .linkedin {
+        .logo {
+            position: absolute;
+            width: 2.5rem;
+            bottom: 8%;
+            right: 50%;
+        }
+        .link {
+            position: absolute;
+            top: 66%;
+            left: 51%;
+            color: $dark-text;
+            &:hover {
+                color: black;
+                font-weight: bold;
+            }
+        }
+    }
 }
