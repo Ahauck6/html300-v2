@@ -4,3 +4,56 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+.main {
+    display: flex;
+    border: 3rem solid $border;
+    padding: 3rem;
+    margin: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    font-family: $font;
+}
+
+@mixin flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-one {
+    @include flex;
+    align-items: center;
+    margin: 1rem;
+}
+
+.container-two {
+    @include flex;
+    align-items: left;
+    background-color: $light-grey;
+    padding: 1rem 18rem 5rem 1rem;
+}
+
+img {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 15rem;
+    height: 15rem;
+}
+
+.name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $dark-text;
+    padding: 1rem 0rem .5rem 0rem;
+}
+
+.job {
+    font-style: italic;
+    color: $text-color;
+    font-size: 1.5rem;
+}
+
+ul {
+    color: $text-color;
+    list-style-type: none;
+}
