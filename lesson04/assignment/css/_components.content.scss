@@ -1,0 +1,30 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+//Using mixin for h1 styling
+@mixin decorative {
+    font-family: 'Permanent Marker', cursive; 
+    text-align: center;
+    margin: 0;
+    background: -webkit-linear-gradient($red 70%, $redbrown 30%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+//Using mixin to implement transition
+@mixin rising {
+    transition: transform 100ms;
+    transform: translateY(-10px);
+    background-color: $green;
+    //added flair to transition
+    -webkit-transition: background-color 800ms linear;
+    -ms-transition: background-color 800ms linear;
+    transition: background-color 800ms linear;
+}
