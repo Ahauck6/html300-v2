@@ -4,3 +4,74 @@
 @import 'settings.responsive';
 @import 'components.content';
 
+//h1 styling
+h1 {
+    @include decorative;
+    font-size: 3em;
+}
+
+//CSS grid for the layout
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto .5fr;
+    gap: 0px;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "content"
+        "footer";
+    background-color: $yellow;
+    color: $chestnut;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+//body(main) of page is split into aside and main content 
+.content {
+    margin: 1.5rem .5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px;
+    grid-template-areas: "aside main main";
+    grid-area: content;
+    @include media-query(mobile) {
+        grid-template-areas: 
+            "aside"
+            "main";
+        grid-template-columns: 1fr;
+    }
+}
+
+//structuring the aside using flexbox
+aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+//structuring the main content using flexbox
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: left;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+//style h3 text color to red
+h3 {
+    color: $red;
+}
+
+
