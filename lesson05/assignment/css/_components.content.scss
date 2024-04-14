@@ -11,3 +11,76 @@ html {
 .main {
     padding: 2rem;
 }
+
+//Mixin for h1 styling
+@mixin decorative {
+    font-family: 'Permanent Marker', cursive; 
+    text-align: center;
+    margin: 0;
+    background: -webkit-linear-gradient($red 70%, $redbrown 30%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+//styling for heading using image of greens
+.head {
+    min-height: 15rem;
+    grid-area: header;
+    background: $green;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/25/Collard_greens_perking_up_after_long_cold_spell_-_Flickr_-_naturalflow.jpg?20200721074448');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+//styling for nav bar using flexbox as seen in course flexbox activity lesson 5 video 2
+.nav {
+    background: $earthgreen;
+    grid-area: nav;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    &-wrap {
+        max-width: 1920px;
+    }
+    //styling for nav bar list
+    &_list {
+        padding: 0;
+        margin: 0 auto;
+        list-style: none;
+        text-align: center;
+    }
+    //styling for items in the nav bar list
+    &_item {
+        display: inline-block;
+        font-size: 20px;
+        margin-right: 2rem;
+        font-weight: bold;
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+    //setting the color and removing the underline of the links
+    &_link{
+        color: $chestnut;
+        text-decoration: none;
+    }
+}
+
+//styling for footer
+footer {
+    background-color: $earthgreen;
+    grid-area: footer;
+    text-align: center;
+    width: 100%;
+    height: 3rem;
+    bottom: 0;
+    color: $chestnut;
+    min-height: 20vh;
+}
+
