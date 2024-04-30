@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <title>Assignment 06 - Bootstrap 4</title>
+    </head>
+    <body>
+        <header class="head">
+            <!--nav bar code origin: https://getbootstrap.com/-->
+            <nav>
+            <ul class="nav nav-pills nav-fill gap-2 p-1 small rounded-5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-bg: var(--bs-white);">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false"><a href="index.html">Home</a></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false"><a href="setup.html">Set Up</a></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true"><a href="recipes.html">Recipes</a></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false"><a href="verity.html">Veggie Verity</a></button>
+                  </li>
+              </ul>
+              </nav>
+            </header>
+            <div class="body">
+              <h1>Recipes Straight From The Garden</h1>
+              <!--Images using bootstrap-->
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Squash.jpg/690px-Squash.jpg?20051008204649" class="img-fluid img-thumbnail" width="300" alt="A squash cut in half.">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Fresh_Sweet_Corn.jpg/1200px-Fresh_Sweet_Corn.jpg?20210616164625" class="img-fluid img-thumbnail" width="300" alt="An image of corn still in the husk.">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Green_beans_169clue.jpg/1200px-Green_beans_169clue.jpg?20150414133201" class="img-fluid img-thumbnail" width="300" alt="A pile of beans">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Lettuce_%284988502260%29.jpg/1200px-Lettuce_%284988502260%29.jpg?20130321175217" class="img-fluid img-thumbnail" width="300" alt="An image of lettuce.">
+              <!--Recipes-->
+              <div class="row border border-success">
+              <h3 class="red center">GRILLED SQUASH</h3>
+              <p>Cook Time: 15 mins</p>
+              <p>Ingredients: 4 medium sized squash, 1/2 cup olive oil, salt, pepper, and thyme.</p>
+              <p>Instructions: 1. Preheat the grill to medium heat. 2.Cut squash horizontally into at least 1/2 inch thick pieces. 3. Brush olive oil onto squash and season. 4. Grill squash for 7-8 mins per side depending on desired tenderness. Serve.</p>
+              </div>
+              <div class="row border border-success">
+              <h3 class="red center">GRILLED CORN</h3>
+              <p>Cook Time: 15 mins</p>
+              <p>Ingredients: 5 stocks of corn, 1/2 cup melted butter, salt, and pepper.</p>
+              <p>Instructions: 1. Preheat the grill to medium heat. 2. Peel back the husks of the corn to the base and remove the threads. 3. Brush the corn with melted butter and season. Cover the corn with the husks. 4. Grill for 15 mins and rotate occasionally. Serve.</p>
+              </div>
+              <div class="row border border-success">
+              <h3 class="red center">SAUTEED GREEN BEANS</h3>
+              <p>Cook Time: 6 mins</p>
+              <P>Ingredients: handful of green beans, 2 cloves of garlic, 1/4 cup olive oil, salt, and pepper</P>
+              <p>Instructions: 1. Bring a large pan of water to boil. 2. Cook for 4 mins. Then drain and rinse under cold water. 3. Heat oil over medium heat in skillet. 4. Add beans and garlic for two mins. Add seasoning when stirring beans. Serve. </p>
+              </div>
+              <div class="row border border-success">
+              <h3 class="red center">LETTUCE SALAD</h3>
+              <p>Cook Time: 3 mins</p>
+              <p>Ingredients: lettuce, shallots, lemon, parmesan, olive oil, salt, pepper, and crushed red pepper flakes </p>
+              <p>Instructions: 1. Take desired amount of lettuce and place in a large bowl. 2. Add 2 thinly sliced shallots, red pepper flakes, and a cup of grated parmesan to the bowl. 3. Add dressing(salt, pepper, olive oil, lemon juice) to salad bowl and toss. Serve.</p>
+              </div>
+            </div>
+            <!--Footer section-->
+            <footer>
+                <p> &copy;2024 Ashlynn Hauck | Seattle, WA</p>
+            </footer>
+    </body>
+</html>

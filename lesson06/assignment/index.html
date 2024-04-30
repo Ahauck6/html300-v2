@@ -5,11 +5,68 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="css/style.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <title>Assignment 06 - Bootstrap 4</title>
     </head>
     <body>
-        <main class="main">
-          
-        </main>
+            <header class="head">
+            <!--nav bar code origin: https://getbootstrap.com/-->
+            <nav>
+            <ul class="nav nav-pills nav-fill gap-2 p-1 small rounded-5 shadow-sm" id="pillNav2" role="tablist" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-bg: var(--bs-white);">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active rounded-5" id="home-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="true"><a href="index.html">Home</a></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-5" id="profile-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false"><a href="setup.html">Set Up</a></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false"><a href="recipes.html">Recipes</a></button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link rounded-5" id="contact-tab2" data-bs-toggle="tab" type="button" role="tab" aria-selected="false"><a href="verity.html">Veggie Verity</a></button>
+                  </li>
+              </ul>
+              </nav>
+            </header>
+            <div class="body two">
+            <main>
+            <!--button animation-->
+            <button class="btn">
+              <span class="background">
+                Welcome Greenhorn Growers
+              </span>
+            </button>
+            <h1>For All The Greenhorn Growers Out There</h1>
+            <!--structuring body of the page-->
+            <div class="main">
+            <div class="left">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/17%22_Tall_6_In_1_Modular_Metal_Raised_Garden_Bed_Kit.jpg?20211018072122" width="400" alt="An image of raised garden beds.">
+            </div>
+            <div class="right">
+            <!--Purpose of the website-->
+            <p>Every time warmer weather comes around I revisit the idea of starting a garden. However, along the way I 
+              always start to feel overwhelmed by the endless options and knowledge that goes into growing a successful 
+              luscious garden. I want to simplify that process and make it feel more approachable for newbie gardeners. This guide 
+              will remain specific to the Pacific Northwest climate here in Washington.</p>
+              <!--Use of tooltips-->
+            <p>This will be a simple variation on the well known <a class="undo" href="#" data-toggle="tooltip" data-placement="right" title="Originated in North America 3000 years ago!">Three Sisters</a>, which is campion planting started by the Iroquois. 
+              Corn, beans, and squash help each other thrive, deter pest and enrich the soil. Corn provides tall stalks for the beans to climb.
+              Beans provide nitrogen to the soil by taking it from the air and converting it so plant roots can absorb it. And the squash has 
+              large leaves that shade the soil which helps to retain moisture and prevent weeds. The squash also has some prickly parts that 
+              help keep small creatures away. Lettuce will be the added vegetable amoung the Three Sisters. It can easily be planted along side 
+              the squash and harvested sooner than its slow growing neighbor. Have fun exploring and learning your way to no fuss garden bed. Our 
+              website offers an instructive how-to-page for setting up your garden, recipe ideas utilizing ingredients straight from your 
+              greenhorn garden, and fun facts about your four plant buddies.</p>
+            <p>There is a lot of joy and fulfillment to be had in tending to your own garden, I hope through this website I 
+              can remove the intimidation factor and present all the needed knowledge on a nice clean plate.</p>
+            </div>
+            </div>
+            </main>
+            </div>
+          <!--footer section-->
+          <footer>
+            <p> &copy;2024 Ashlynn Hauck | Seattle, WA</p>
+          </footer>
     </body>
 </html>
