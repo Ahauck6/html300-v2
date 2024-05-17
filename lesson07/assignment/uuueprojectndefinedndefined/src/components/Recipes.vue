@@ -1,9 +1,13 @@
 <template>
   <div>
+  <div class="image-row">
+  <!--V-for loop for images-->
     <div v-for="(image, index) in images" :key="index">
       <img :src="image.src" :class="image.class" :width="image.width" :alt="image.alt" />
     </div>
+  </div>
   </div>  
+  <!--Main content-->
               <div class="row border border-success">
               <h3 class="red center">GRILLED SQUASH</h3>
               <p>Cook Time: 15 mins</p>

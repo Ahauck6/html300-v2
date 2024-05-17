@@ -1,7 +1,8 @@
 <template>
-<main id="app">
   <main class="body">
+      <div class="pad">
       <h1>Fun Facts About Your Garden Buddies</h1>
+      </div>
       <p>Vegetable or fruit? Hover over each garden buddie to see what they are!</p>
       <!--Use of tooltips-->
       <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="right" title="Fruit!">
@@ -16,10 +17,11 @@
       <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="right" title="Vegetable!">
         Lettuce
       </button>
+  <!--V-for loop for accordion content-->
   <div class="accordion" id="accordionExample">
     <div class="accordion-item" v-for="(item, index) in vegetables" :key="index">
       <h2 class="accordion-header" :id="'heading' + index">
-        <button class="accordion-button" type="button" :data-bs-toggle="'collapse' + index" :data-bs-target="'#collapse' + index" :aria-expanded="index === 0 ? 'true' : 'false'" :aria-controls="'collapse' + index">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" :data-bs-target="'#collapse' + index" :aria-expanded="index === 0 ? 'true' : 'false'" :aria-controls="'collapse' + index">
           {{ item.name }}
         </button>
       </h2>
@@ -35,11 +37,9 @@
 
 <script>
 export default {
-  name: 'Verity'
-}
-  new Vue({
-    el: '#app',
-    data: {
+  name: 'Verity',
+  data(){
+    return{
       vegetables: [
         { name: 'CORN', description: 'Corn is hard on the soil. As it grows it depletes nitrogen and other nutrients from the soil.' },
         { name: 'BEANS', description: 'The tallest bean plant was over 45 feet tall.' },
@@ -47,5 +47,6 @@ export default {
         { name: 'LETTUCE', description: 'Lettuce is part of the sunflower family.' }
       ]
     }
-  });
+  }
+}
 </script>

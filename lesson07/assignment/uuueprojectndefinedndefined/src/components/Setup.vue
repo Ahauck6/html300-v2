@@ -1,5 +1,4 @@
 <template>
-<div id="app">
             <div class="row body">
             <div class="col-xl-4 col-lg-5 col-sm-6 col-12 p-3">
             <aside>
@@ -7,13 +6,21 @@
                 <h3 class="red">Check Your Local Weather To Help Water Affectively</h3>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Droplets_raining.jpg/1200px-Droplets_raining.jpg?20200930121249" width="300" alt="Photo of rain falling in a puddle.">
                 <p>In order to keep your plants looking their best they will need water weekly. The plants will need to be irrigated if it does not rain at least an inch per week.</p>
+                <div>
+                <!--V-if V-else statement-->
+                <p v-if="showMessage">Water!</p>
+                <p v-else>What do plants need?!</p>
+                <button @click="toggleMessage":style="{ backgroundColor: buttonColor }">Find Out</button>
+                </div>
             </aside>
             </div>
             <div class="col-xl-8 col-lg-7 col-sm-6 col-12 p-3">
             <main class="content">
                 <!--main content for the page-->
                 <div>
+                    <div class="pad">
                     <h1>Simple Garden Set Up</h1>
+                    </div>
                     <div class="image">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Three_Sisters_Permaculture.jpg?20210325233801" width="450" alt="An illustration of corn, beans, and squash growing together.">
                     </div>
@@ -36,11 +43,22 @@
             </main>
             </div>
             </div>
-            </div>
 </template>
 
 <script>
 export default {
-    name: 'Setup'
+    name: 'Setup',
+    data() {
+    return {
+      showMessage: false,
+      buttonColor: 'green'
+    };
+  },
+  methods: {
+    toggleMessage() {
+      this.showMessage = !this.showMessage;
+      this.buttonColor = this.showMessage ? 'blue' : 'green';
+    }
+  }
 }
 </script>

@@ -1,6 +1,5 @@
 <template>
-<div id="app">
-            <div class="body two">
+            <div class="two">
             <main>
             <!--button animation-->
             <button class="btn">
@@ -35,7 +34,6 @@
             </div>
             </main>
             </div>
-            </div>
 </template>
 
 <script>
@@ -43,3 +41,5 @@ export default {
   name: 'Home'
 }
 </script>
+
+
